@@ -222,3 +222,55 @@ header {
   position: relative;
   top: 1px;
 }
+
+/* Destinations */
+.destinations {
+  padding: 96px, 0px, 100px;
+  overflow-x: hidden;
+}
+
+.destinations__row {
+  display: flex;
+  column-gap: 50px;
+}
+.destinations__content {
+  max-width: 456px;
+}
+.block {
+}
+
+.destinations__slider {
+  min-width: 1110px;
+  flex-shrink: 0;
+}
+
+.destinations__title {
+  margin-bottom: 15px;
+
+  font-size: 55px;
+  font-weight: 600;
+}
+
+.destinations__title span {
+  font-size: 30px;
+}
+.destinations__text {
+  margin-bottom: 60px;
+
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--secondary);
+}
+
+.main__btn {
+  display: inline-block;
+  padding: 25px 45px;
+
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+
+  background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%),
+    #ffffff;
+  border-radius: 100px;
+}
