@@ -43,6 +43,7 @@ body {
 /* Header */
 
 header {
+  overflow: hidden;
   position: relative;
   min-height: 940px;
   padding-top: 44px;
@@ -71,8 +72,29 @@ header {
   margin-bottom: 86px;
 }
 
+.header__row {
+  display: flex;
+}
+
 .header__content {
-  min-width: 592px;
+  position: relative;
+  z-index: 1;
+  max-width: 592px;
+}
+
+.header__image {
+  position: relative;
+  flex-grow: 1;
+}
+
+.header__image img {
+  position: absolute;
+  top: -188px;
+  right: -100px;
+
+  max-width: unset;
+  width: 894px;
+  height: 940px;
 }
 
 /* Nav */
@@ -101,13 +123,23 @@ header {
   content: "";
 
   position: absolute;
+  left: 0;
+  right: 10px;
+  bottom: -6px;
+
   display: block;
-  width: 35px;
+  /* width: 35px; */
   height: 4px;
   background-color: #c4c4c4;
   border-radius: 100px;
 }
 .nav__login {
+  display: flex;
+  column-gap: 25px;
+  align-items: center;
+
+  font-size: 15px;
+  font-weight: 500;
 }
 
 /* Logo */
@@ -119,4 +151,74 @@ header {
 
 .logo a {
   color: inherit;
+}
+
+/* Button */
+
+.btn {
+  display: inline-block;
+  padding: 13px 44px;
+
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+
+  background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%),
+    #ffffff;
+  border-radius: 100px;
+}
+
+.btn:hover {
+  color: rgb(253, 228, 200);
+  transition: color 0.2s ease-in;
+}
+
+.btn:active {
+  position: relative;
+  top: 1px;
+}
+
+/* Header content */
+
+.header__badge {
+  margin: 7px;
+  display: inline-block;
+  padding: 11px 30px;
+  font-size: 18px;
+  font-weight: 500;
+
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 15px;
+}
+.header__title {
+  margin-bottom: 30px;
+  font-size: 55px;
+  font-weight: 400;
+}
+.header__text {
+  max-width: 519px;
+  margin-bottom: 68px;
+  font-size: 25px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.5);
+}
+.header__btn {
+  display: inline-block;
+  padding: 26px 48px;
+
+  background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%);
+  border-radius: 27px;
+
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.header__btn:hover {
+  color: rgb(253, 228, 200);
+  transition: color 0.2s ease-in;
+}
+
+.header__btn:active {
+  position: relative;
+  top: 1px;
 }
