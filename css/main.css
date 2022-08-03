@@ -89,12 +89,13 @@ header {
 
 .header__image img {
   position: absolute;
-  top: -188px;
-  right: -100px;
+  top: -181px;
+  right: -87px;
 
   max-width: unset;
   width: 894px;
   height: 940px;
+  pointer-events: none;
 }
 
 /* Nav */
@@ -104,10 +105,7 @@ header {
   align-items: center;
   column-gap: 80px;
 }
-.nav__logo {
-}
-.block {
-}
+
 .nav__list {
   display: flex;
   column-gap: 80px;
@@ -155,7 +153,7 @@ header {
 
 /* Button */
 
-.btn {
+.logo__btn {
   display: inline-block;
   padding: 13px 44px;
 
@@ -168,12 +166,12 @@ header {
   border-radius: 100px;
 }
 
-.btn:hover {
+.logo__btn:hover {
   color: rgb(253, 228, 200);
   transition: color 0.2s ease-in;
 }
 
-.btn:active {
+.logo__btn:active {
   position: relative;
   top: 1px;
 }
@@ -202,6 +200,7 @@ header {
   font-weight: 700;
   color: rgba(255, 255, 255, 0.5);
 }
+
 .header__btn {
   display: inline-block;
   padding: 26px 48px;
@@ -235,8 +234,6 @@ header {
 }
 .destinations__content {
   max-width: 456px;
-}
-.block {
 }
 
 .destinations__slider {
@@ -272,5 +269,67 @@ header {
 
   background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%),
     #ffffff;
-  border-radius: 100px;
+  border-radius: 27px;
+}
+
+.main__btn:hover {
+  color: rgb(253, 228, 200);
+  transition: color 0.2s ease-in;
+}
+
+.main__btn:active {
+  position: relative;
+  top: 1px;
+}
+
+/* Slider */
+
+.slider {
+  position: relative;
+  height: 456px;
+}
+
+.slider__item {
+  margin-top: 27px;
+  width: 335px;
+  height: 402px;
+  object-fit: cover;
+  border-radius: 35px;
+
+  transition: 0.2s ease-in;
+}
+
+.slider .center .slider__item {
+  margin-top: 0px;
+  width: 380px;
+  height: 456px;
+}
+
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9;
+
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%),
+    #8b8b8b;
+}
+
+.slider__btn--prev {
+  left: -27px;
+  padding-left: 26px;
+  justify-content: flex-start;
+}
+
+.slider__btn--next {
+  right: -27px;
+
+  padding-right: 26px;
+  justify-content: flex-end;
 }
